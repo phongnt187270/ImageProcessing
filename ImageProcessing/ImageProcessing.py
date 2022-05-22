@@ -34,7 +34,13 @@ for r in n:
 #
 b = []
 
+sum = 0;
 
+for m in a:   
+    sum += m;   
+    print(sum);    
+    
+        
 
 #plt.hist(h, bins=64)
 
