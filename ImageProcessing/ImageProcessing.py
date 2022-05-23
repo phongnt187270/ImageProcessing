@@ -22,30 +22,46 @@ h = []
 
 a = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
 
-for k in range (10) :
-    for i in range(len(X)) :
-        for j in range(len(X[0])) :
-            if (k == X[i][j]):
-                n[k] += 1
+for i in range(len(X)) :
+    for j in range(len(X[0])) :
+        n[X[i][j]] += 1
 
 for r in n:
-    h = r /MN;
-    print(h,  end = ' ');
+    h.append(r / MN)
+    print(r / MN,  end = ' ');
+
+print()
+    
+x = np.array(a)
+y = np.array(h)
+
+plt.title("Histogram")    
+plt.bar(x,y)
+plt.show()
+
+plt.show()
 
 #
+p = []
+
 b = []
 
 sum = 0;
 
-for m in a:   
-    sum += m;   
-    print(sum, end = ' ');   
-    
-x = np.array(a)
-y = np.array(h)
-    
-plt.bar(x,y, width = 0.01)
-plt.show()
+b_min = 1
+b_max = 9
 
-plt.show()
+for m in h:   
+    sum += m
+    b.append((b_max - b_min) * sum + b_min)
+ 
+for n in b:
+    print(n, end  = ' ')
 
+e_X = [[],[]]
+
+#for i in range(len(X)) :
+#    for j in range(len(X[0])) :
+#        e_X[a[i][j]] = b[i][j]
+#        print(e_X, end  = ' ')
+#    print()
