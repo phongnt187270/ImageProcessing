@@ -58,10 +58,7 @@ for m in h:
 for n in b:
     print(n, end  = ' ')
 
-e_X = [[],[]]
-
-#for i in range(len(X)) :
-#    for j in range(len(X[0])) :
-#        e_X[a[i][j]] = b[i][j]
-#        print(e_X, end  = ' ')
-#    print()
+for i in range(len(X)) :
+    for j in range(len(X[0])) :
+        if (X[i][j] == a[j]):
+            X[i][j] = b[j]
